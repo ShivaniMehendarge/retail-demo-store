@@ -29,6 +29,11 @@ DEBUG_LOGGING = True
 # use a cache to help smooth out periods where we get throttled.
 personalize_meta_cache = ExpiringDict(2 * 60 * 60)
 
+# Since the DescribeCampaign API easily throttles and we just need
+# the recipe from the campaign and it won't change often (if at all), 
+# use a cache to help smooth out periods where we get throttled.
+personalize_meta_cache = ExpiringDict(2 * 60 * 60)
+
 servicediscovery = boto3.client('servicediscovery')
 personalize = boto3.client('personalize')
 ssm = boto3.client('ssm')
