@@ -16,9 +16,6 @@ const parseCart = (cart) =>
         items: [],
       };
 
-const TAX_RATE = 0.05;
-const SHIPPING_RATE = 10;
-
 export const cart = {
   mixnins: [user],
   data() {
