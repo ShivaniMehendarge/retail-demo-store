@@ -51,6 +51,7 @@ export default {
     RecommendedProductsSection,
     DemoGuideBadge,
   },
+  mixins: [user],
   data() {
     return {
       feature: EXPERIMENT_FEATURE,
