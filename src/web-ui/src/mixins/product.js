@@ -8,7 +8,6 @@ import { getProductImageUrl } from '../util/getProductImageUrl';
 const ProductsRepository = RepositoryFactory.get('products');
 
 export const product = {
-  mixins: [user],
   data() {
     return {
       product: null,

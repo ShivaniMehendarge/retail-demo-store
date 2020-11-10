@@ -107,7 +107,7 @@ export default {
       default: false,
     },
   },
-  mixins: [user, product, cart],
+  mixins: [product],
   data() {
     return {
       quantity: 1,
