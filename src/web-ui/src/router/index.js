@@ -25,8 +25,6 @@ import { AnalyticsHandler } from '@/analytics/AnalyticsHandler'
 
 import { Credentials } from '@aws-amplify/core';
 
-import {getWelcomePageVisited, setWelcomePageVisited} from '@/config/localStorage/keys/welcomePageVisited'
-
 const UsersRepository = RepositoryFactory.get('users')
 
 Vue.use(Router);
