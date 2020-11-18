@@ -76,6 +76,9 @@ export default {
   created() {
     AnalyticsHandler.cartViewed(this.user, this.cart, this.cartQuantity, this.cartTotal);
   },
+  data() {
+    return { isEnabled: process.env.VUE_APP_ENABLE_ABANDON_CART_BUTTON === 'true' };
+  },
   computed: {
     ...mapState({ cart: (state) => state.cart.cart, user: (state) => state.user }),
     ...mapGetters(['cartQuantity', 'cartTotal', 'formattedCartTotal']),
