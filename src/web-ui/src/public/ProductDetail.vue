@@ -18,6 +18,11 @@
 
             <div v-if="cartHasMaxAmount" class="mb-2">Sorry, you cannot add more of this item to your cart.</div>
 
+            <div class="mb-2">
+              <template v-if="outOfStock">Sorry, this item is currently out of stock.</template>
+              <template v-else>Items currently in stock: {{ product.current_stock }}</template>
+            </div>
+
             <div class="mb-5 mb-md-4 d-flex">
               <button
                 v-if="!outOfStock && !cartHasMaxAmount"
